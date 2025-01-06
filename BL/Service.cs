@@ -20,7 +20,7 @@ namespace BL
         /// <returns>un listadode casillas o null si el nivel no existe </returns>
         public static List<List<Casilla>>? NuevoNivel(int dificultad)
         {
-            int numeroDeMinasPorColumna = 1;
+            int numeroDeCasillas = 1;
             int numeroDeMinasActivasPorColumna = 1;
             int numeroDeColumnas = 1;
             List<List<Casilla>>? juego = new List<List<Casilla>>();
@@ -30,22 +30,22 @@ namespace BL
             {
                 case 1:
                     numeroDeMinasActivasPorColumna = 1;
-                    numeroDeMinasPorColumna = 8;
+                    numeroDeCasillas = 8;
                     numeroDeColumnas = 10;
                     break;
                 case 2:
                     numeroDeMinasActivasPorColumna = 2;
-                    numeroDeMinasPorColumna = 10;
+                    numeroDeCasillas = 10;
                     numeroDeColumnas = 12;
                     break;
                 case 3:
                     numeroDeMinasActivasPorColumna = 3;
-                    numeroDeMinasPorColumna = 12;
+                    numeroDeCasillas = 12;
                     numeroDeColumnas = 14;
                     break;
                 case 4:
                     numeroDeMinasActivasPorColumna = 4;
-                    numeroDeMinasPorColumna = 14;
+                    numeroDeCasillas = 14;
                     numeroDeColumnas = 16;
                     break;
 
@@ -56,8 +56,8 @@ namespace BL
 
             if (juego != null)
             {
-                NumeroDeMinasSeguras = (numeroDeMinasPorColumna - numeroDeMinasActivasPorColumna) * numeroDeColumnas;
-                RellenarJuego(numeroDeMinasPorColumna, numeroDeMinasActivasPorColumna, numeroDeColumnas, juego);
+                NumeroDeMinasSeguras = (numeroDeCasillas - numeroDeMinasActivasPorColumna) * numeroDeColumnas;
+                RellenarJuego(numeroDeCasillas, numeroDeMinasActivasPorColumna, numeroDeColumnas, juego);
                 DesarodenarJuego(juego);
                 AsignarNumeroDeMinasCercanas(juego);
             }
@@ -109,11 +109,11 @@ namespace BL
         /// <summary>
         /// Rellean el lisatdo
         /// </summary>
-        /// <param name="numeroDeMinas"></param>
+        /// <param name="numeroDeCasillas"></param>
         /// <param name="numeroDeMinasActivas"></param>
         /// <param name="numeroDeColumnas"></param>
         /// <param name="juego"></param>
-        private static void RellenarJuego(int numeroDeMinas, int numeroDeMinasActivas, int numeroDeColumnas, List<List<Casilla>> juego)
+        private static void RellenarJuego(int numeroDeCasillas, int numeroDeMinasActivas, int numeroDeColumnas, List<List<Casilla>> juego)
         {
             List<Casilla> x;
             for (int i = 0; i < numeroDeColumnas; i++)
@@ -125,7 +125,7 @@ namespace BL
             Casilla nuevaMina;
             foreach (List<Casilla> columna in juego)
             {
-                for (int i = 0; i < numeroDeMinas - numeroDeMinasActivas; i++)
+                for (int i = 0; i < numeroDeCasillas - numeroDeMinasActivas; i++)
                 {
                     nuevaMina = new Casilla();
                     columna.Add(nuevaMina);
