@@ -57,6 +57,7 @@ namespace MineSweeper.Models.MainPage
 
             if (ListadoDeCasillas == null)
             {
+                Nivel--;
                 JuegoGanado = true;
             }
             else

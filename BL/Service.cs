@@ -28,6 +28,7 @@ namespace BL
 
             switch (dificultad)
             {
+
                 case 1:
                     numeroDeMinasActivasPorColumna = 1;
                     numeroDeCasillas = 8;
@@ -35,15 +36,30 @@ namespace BL
                     break;
                 case 2:
                     numeroDeMinasActivasPorColumna = 2;
+                    numeroDeCasillas = 9;
+                    numeroDeColumnas = 11;
+                    break;
+                case 3:
+                    numeroDeMinasActivasPorColumna = 2;
                     numeroDeCasillas = 10;
                     numeroDeColumnas = 12;
                     break;
-                case 3:
+                case 4:
+                    numeroDeMinasActivasPorColumna = 3;
+                    numeroDeCasillas = 11;
+                    numeroDeColumnas = 13;
+                    break;
+                case 5:
                     numeroDeMinasActivasPorColumna = 3;
                     numeroDeCasillas = 12;
                     numeroDeColumnas = 14;
                     break;
-                case 4:
+                case 6:
+                    numeroDeMinasActivasPorColumna = 4;
+                    numeroDeCasillas = 13;
+                    numeroDeColumnas = 15;
+                    break;
+                case 7:
                     numeroDeMinasActivasPorColumna = 4;
                     numeroDeCasillas = 14;
                     numeroDeColumnas = 16;
