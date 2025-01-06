@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MineSweeper.Pages.NewPlayerPage"
+        Background="White">
+    
+    <VerticalStackLayout VerticalOptions="Start" Padding="20" HorizontalOptions="Center">
+        <Label Text="Busca Minas" TextColor="Black" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+        <Entry Text="{Binding Nombre}" Placeholder="Alias del jugador" PlaceholderColor="Black" BackgroundColor="AliceBlue" TextColor="Black" MaximumWidthRequest="400" />
+        <Button Text="Continuar" Clicked="OnContinueClicked" BackgroundColor="LightBlue" TextColor="Black" MaximumWidthRequest="400" />
+        <Image Source="{Binding Img}" MaximumHeightRequest="600" MaximumWidthRequest="600" HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</ContentPage>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MineSweeper.Pages.ScorePage"
+            
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+        
+            <Label 
+            Text="¡ Juego Finalizado !" 
+            FontSize="28" 
+            FontAttributes="Bold" 
+            HorizontalOptions="Center" 
+            TextColor="Black" />
+
+            <Image 
+            Source="{Binding Img}"
+            Aspect="AspectFit" 
+            HeightRequest="250" 
+            Margin="0,10" 
+            HorizontalOptions="Center" />
+
+       
+            <Button 
+            Text="Volver a Jugar" 
+            FontSize="18" 
+            BackgroundColor="#1976D2" 
+            TextColor="White" 
+            CornerRadius="10" 
+            Padding="10" 
+            HorizontalOptions="Center" 
+            WidthRequest="200"
+            Clicked="GoBackButton_Clicked" />
+
+    
+            <Label 
+            Text="Tabla de punttuaciones:" 
+            FontSize="22" 
+            FontAttributes="Bold" 
+            Margin="0,20,0,10" 
+            HorizontalOptions="Start"
+            TextColor="#333333" />
+
+
+            <CollectionView 
+        ItemsSource="{Binding ListadoDePartidas}" 
+        Margin="0,10,0,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame 
+                    BorderColor="#EEEEEE" 
+                    CornerRadius="10" 
+                    Padding="10" 
+                    Margin="0,5"
+                    BackgroundColor="White">
+                            <StackLayout Orientation="Vertical" Spacing="5">
+                                <Label Text="{Binding NombreJugador}" 
+                               FontSize="18" 
+                               FontAttributes="Bold" 
+                               TextColor="#333333" />
+                                <Label Text="{Binding NivelAlcanzado, StringFormat='Maximo  Nivel alcanzado: {0}'}" 
+                               FontSize="14" 
+                               TextColor="#757575" />
+                                <Label Text="{Binding NumeroDeMinasRestantes, StringFormat='Casillas Seguras Restantes: {0}'}" 
+                               FontSize="14" 
+                               TextColor="#757575" />
+                                <Label Text="{Binding EstadoDelJuego, StringFormat='Estatus De partida: {0}'}" 
+                               FontSize="14" 
+                               TextColor="#757575" />
+
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

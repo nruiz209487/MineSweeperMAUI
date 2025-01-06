@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MineSweeper"
+             x:Class="MineSweeper.MainPage"
+            Background="WhiteSmoke">
+
+    <Grid Background="WhiteSmoke">
+
+        <!-- Se que lo de concatenar listViews no lo ideal pero no he encontrado niguna otra manera de que funcione el mostar un listado dentro de otro ademas de que funcione el binding de Binding CasillaSelecionada  -->
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[0]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+            Margin="0,10,0,0"
+                 MaximumWidthRequest="80"
+                        VerticalScrollBarVisibility="Never"
+                  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[1]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+                  MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[2]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+              MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[3]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+                MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[4]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+             MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[5]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+        MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[6]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+               MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[7]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+           MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[8]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+             MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[9]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+        MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[10]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+                MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[11]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+             MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[12]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+              MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[13]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+          MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[14]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+              MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView ItemsSource="{Binding NuevoJuego.objManejadoraColumnas.Columnas[15]}" 
+          SelectedItem="{Binding CasillaSelecionada}" 
+          Margin="0,10,0,0"
+                MaximumWidthRequest="80"
+                           VerticalScrollBarVisibility="Never">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="5" Spacing="5">
+                                <Image Source="{Binding Img}" MaximumHeightRequest="40" MaximumWidthRequest="40"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </HorizontalStackLayout>
+
+
+
+
+    
+    </Grid>
+
+</ContentPage>
